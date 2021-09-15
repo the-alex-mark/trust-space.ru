@@ -5,7 +5,7 @@ namespace App\Helpers;
 /**
  *
  */
-class Api {
+class ApiHelper {
 
     /**
      * Возвращает список необходимых заголовков.

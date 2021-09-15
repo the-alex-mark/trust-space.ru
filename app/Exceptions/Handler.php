@@ -2,7 +2,7 @@
 
 namespace App\Exceptions;
 
-use App\Helpers\Api as ApiHelper;
+use App\Helpers\ApiHelper;
 use Error;
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
