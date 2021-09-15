@@ -1,6 +1,5 @@
 <?php
 
-use Monolog\Formatter\LineFormatter;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -101,18 +100,6 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+    ],
 
-        'mail' => [
-            'driver'                    => 'daily',
-            'path'                      => storage_path('logs/mail/mail.log'),
-            'formatter'                 => LineFormatter::class,
-            'formatter_with'            => [
-                'format'                => "[%datetime%] mail.%level_name%: %message%" . PHP_EOL,
-                'dateFormat'            => 'Y-m-d H:i:s',
-                'allowInlineLineBreaks' => true
-            ],
-            'level'                     => env('LOG_LEVEL', 'debug'),
-            'days'                      => 30,
-        ]
-    ]
 ];
